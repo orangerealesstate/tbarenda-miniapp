@@ -12,9 +12,10 @@ bot.on("channel_post", (msg) => {
 
   console.log(text);
 
-  fs.writeFileSync("posts.json", JSON.stringify({
-    text: text
-  }));
+  fs.writeFileSync(
+    "posts.json",
+    JSON.stringify({ text })
+  );
 });
 
 console.log("Bot started");
