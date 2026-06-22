@@ -5,8 +5,17 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
 });
 
 bot.on("channel_post", (msg) => {
+bot.on("channel_post", (msg) => {
   console.log("NEW POST:");
-  console.log(msg.caption || msg.text);
+
+  if (msg.caption) {
+    console.log(msg.caption);
+  } else if (msg.text) {
+    console.log(msg.text);
+  } else {
+    console.log("Photo without caption");
+  }
+});
 });
 
 console.log("Bot started");
