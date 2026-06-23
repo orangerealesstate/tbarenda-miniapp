@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js & node bot.js"
+    "start": "concurrently \"node server.js\" \"node bot.js\""
   },
   "dependencies": {
     "express": "^5.1.0",
-    "node-telegram-bot-api": "^0.66.0"
+    "node-telegram-bot-api": "^0.66.0",
+    "concurrently": "^9.0.0"
   }
 }
