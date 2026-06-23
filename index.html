@@ -3,29 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TBILISI ARENDA</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial,sans-serif;
 background:#f4f4f4;
+font-family:Arial;
 }
 
 .header{
 background:white;
 padding:20px;
-font-size:24px;
+font-size:28px;
 font-weight:bold;
 position:sticky;
 top:0;
-}
-
-.search{
-background:white;
-margin:15px;
-padding:15px;
-border-radius:15px;
 }
 
 .card{
@@ -45,22 +40,22 @@ padding:15px;
 }
 
 .price{
-color:#ff5a5f;
 font-size:24px;
+color:#ff6600;
 font-weight:bold;
 }
 
-.bottom{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:white;
-display:flex;
-justify-content:space-around;
+button{
+width:100%;
 padding:15px;
-font-size:14px;
+border:none;
+background:#ff6600;
+color:white;
+font-size:18px;
+border-radius:15px;
+margin-top:15px;
 }
+
 </style>
 
 </head>
@@ -70,34 +65,47 @@ font-size:14px;
 🏠 TBILISI ARENDA
 </div>
 
-<div class="search">
-🔍 Поиск по району, цене и комнатам
-</div>
+<div id="list"></div>
+
+<script>
+
+fetch("data.json")
+.then(res=>res.json())
+.then(data=>{
+
+let html="";
+
+data.forEach(item=>{
+
+html+=`
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200">
+
+<img src="${item.image}">
 
 <div class="info">
-<h3>Сабуртало • 2 комнаты</h3>
 
-<div class="price">
-700 $
+<h2>${item.title}</h2>
+
+<div class="price">${item.price}</div>
+
+<p>${item.description}</p>
+
+<button>Подробнее</button>
+
 </div>
 
-<p>
-Новая квартира рядом с метро Делиси
-</p>
-</div>
 </div>
 
-<div style="height:90px"></div>
+`;
 
-<div class="bottom">
-<div>🏠<br>Главная</div>
-<div>🔍<br>Поиск</div>
-<div>🗺<br>Карта</div>
-<div>❤️<br>Избранное</div>
-</div>
+});
+
+document.getElementById("list").innerHTML=html;
+
+});
+
+</script>
 
 </body>
 </html>
