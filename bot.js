@@ -7,7 +7,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
 bot.on("channel_post", (msg) => {
   console.log("NEW POST:");
 
-  const text = msg.caption  msg.text  "Photo without caption";
+ const text = msg.caption  msg.text  "Photo without caption";
 
   console.log(text);
 });
