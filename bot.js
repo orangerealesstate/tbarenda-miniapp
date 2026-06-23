@@ -6,7 +6,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
 });
 
 bot.on("channel_post", (msg) => {
-  const text = msg.caption  msg.text  "";
+ const text = msg.caption  msg.text  "";
 
   let posts = [];
 
