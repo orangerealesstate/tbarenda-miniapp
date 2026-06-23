@@ -1,2 +1,22 @@
 [
+  {
+    "title": "Сабуртало • 2 комнаты",
+    "price": "700$",
+    "description": "Новая квартира рядом с метро Делиси",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200"
+  },
+
+  {
+    "title": "Ваке • 3 комнаты",
+    "price": "1200$",
+    "description": "Современная квартира рядом с парком Ваке",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200"
+  },
+
+  {
+    "title": "Ортачала • 1 комната",
+    "price": "500$",
+    "description": "Уютная квартира с новым ремонтом",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200"
+  }
 ]
