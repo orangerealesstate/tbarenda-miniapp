@@ -1,55 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Каталог квартир</title>
+<title>TBILISI ARENDA</title>
 
 <style>
 body{
-background:#f4f4f4;
-font-family:Arial;
 margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+}
+
+.header{
+background:white;
 padding:20px;
+font-size:24px;
+font-weight:bold;
+position:sticky;
+top:0;
+}
+
+.search{
+background:white;
+margin:15px;
+padding:15px;
+border-radius:15px;
 }
 
 .card{
 background:white;
-border-radius:15px;
-padding:15px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+margin:15px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
-img{
+.card img{
 width:100%;
-border-radius:15px;
+}
+
+.info{
+padding:15px;
 }
 
 .price{
+color:#ff5a5f;
 font-size:24px;
-color:#ff6600;
 font-weight:bold;
 }
-</style>
-</head>
 
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:15px;
+font-size:14px;
+}
+</style>
+
+</head>
 <body>
 
-<h1>🏠 Каталог квартир Тбилиси</h1>
+<div class="header">
+🏠 TBILISI ARENDA
+</div>
+
+<div class="search">
+🔍 Поиск по району, цене и комнатам
+</div>
 
 <div class="card">
-<img src="https://picsum.photos/600/400">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200">
 
-<h2>Сабуртало • 2 комнаты</h2>
+<div class="info">
+<h3>Сабуртало • 2 комнаты</h3>
 
 <div class="price">
-$700
+700 $
 </div>
 
 <p>
 Новая квартира рядом с метро Делиси
 </p>
+</div>
+</div>
 
+<div style="height:90px"></div>
+
+<div class="bottom">
+<div>🏠<br>Главная</div>
+<div>🔍<br>Поиск</div>
+<div>🗺<br>Карта</div>
+<div>❤️<br>Избранное</div>
 </div>
 
 </body>
