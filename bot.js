@@ -15,12 +15,12 @@ const text = msg.caption || msg.text || "";
   } catch {
     posts = [];
   }
-
+let image = "https://picsum.photos/600/400";
   posts.unshift({
     title: text.split("\n")[0],
     price: "",
     description: text,
-    image: "https://picsum.photos/600/400"
+    image: image,
   });
 
   posts = posts.slice(0, 50);
