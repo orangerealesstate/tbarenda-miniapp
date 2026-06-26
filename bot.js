@@ -6,9 +6,6 @@ console.log(process.env.BOT_TOKEN);
 const bot = new TelegramBot(process.env.BOT_TOKEN, {
   polling: true
 });
-  polling: true
-});
-
 bot.on("channel_post", (msg) => {
 const text = msg.caption || msg.text || "";
 
